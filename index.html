@@ -3,22 +3,61 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="stlye.css" />
+		<!-- bootstrap -->
+		<link
+		rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css"
+	  />
+		<!-- <link rel="stylesheet" href="stlye.css" /> -->
 		<title>Snake</title>
 	</head>
 	<body>
-		<header>
-			<h1>Snake Game!</h1>
-		</header>
-		<section class="snake">
-			<div>
-				<h1>Current Score: 0</h1>
-				<h1>High Score: 0</h1>
+		<!-- Nav Bar -->
+		<nav class="navbar navbar-dark bg-primary mb-3 text center">
+			<div class="container text-center">
+				<a href="#" class="navbar-brand text-center font-weight-bold">Snake Game</a>
 			</div>
+		</nav>
+		<!-- Nav Bar End -->
 
-			<canvas id="canvas" width="600" height="600"></canvas>
-			<button onClick="window.location.reload();">Start Again</button>
-		</section>
+		<!-- Main Content -->
+			<section class="snake container" style="padding-top: 10%">
+				<header class="row justify-content-center text-center">
+					<h1 class="col">Current Score: <span class="text-primary" id="cscore">0</span></h1>
+					<h1 class="col">High Score: <span class="text-primary" id="hscore">0</span></h1>
+				</header>
+				<br></br>
+
+				<!-- Game Canvas -->
+				<div class="row justify-content-center">
+					<canvas id="canvas" width="600" height="600" style="background-color: rgb(53,57,58); border-radius: 0.5em;"></canvas>
+				</div>
+				<br></br>
+				<div class="row justify-content-center">
+					<button onClick="window.location.reload();" class="btn-primary font-weight-bold">Start Again</button>
+				</div>
+				<br></br>
+				<!-- Game Canvas End -->
+
+
+				<!-- Card -->
+				<div class="row justify-content-center">
+					<div class="card text-white bg-secondary" style="max-width: 35rem;">
+						<div class="card-header text-center font-weight-bold">How To Play!</div>
+						<div class="card-body">
+							<li class="card-text">Use the arrow keys to controll the snake</li>
+							<li class="card-text">Hitting a wall, going in to your tail will kill you</li>
+							<li class="card-text">No going backwards allowed</li>
+							<li class="card-text">Press the Start Again button to restart</li>
+							<br></br>
+							<p class="card-text text-center text-primary font-weight-bold">Thanks For Playing!</p>
+						</div>
+					</div>
+				</div>
+				<!-- Card End -->
+			</section>
+		<!-- Main Content -->
+
 		<script src="snake.js"></script>
 	</body>
 </html>
